@@ -1,0 +1,1 @@
+export const COVID_TRACKER = 'COVID_TRACKER'
