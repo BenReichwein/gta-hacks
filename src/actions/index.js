@@ -1,7 +1,8 @@
 import axios from 'axios'
 import {
     COVID_TRACKER,
-    TIME_CAPSULE
+    TIME_CAPSULE,
+    WEB_SCRAPE
 } from './types'
 //
 // -> Covid Tracker
@@ -30,4 +31,15 @@ export const getTimeCapsule = () => async (dispatch) => {
     let data = await response.data;
 
     dispatch({ type: TIME_CAPSULE, payload: data});
+}
+//
+// -> Web Scrape
+//
+export const webScrape = (link) => async (dispatch) => {
+    const response = await axios.post('http://localhost:8080/webScraper', {
+        link
+        })
+    let data = await response.data;
+
+    dispatch({ type: WEB_SCRAPE, payload: data});
 }

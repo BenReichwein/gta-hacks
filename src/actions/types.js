@@ -1,2 +1,3 @@
 export const COVID_TRACKER = 'COVID_TRACKER'
 export const TIME_CAPSULE = 'TIME_CAPSULE'
+export const WEB_SCRAPE = 'WEB_SCRAPE'

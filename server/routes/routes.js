@@ -1,4 +1,5 @@
 const timeCapsule = require('./timeCapsule');
+const webScraper = require('./webScraper')
 
 const appRouter = (app, fs) => {
     app.get('/', (req, res) => {
@@ -7,6 +8,7 @@ const appRouter = (app, fs) => {
     })
     // Routes
     timeCapsule(app);
+    webScraper(app);
 }
 
 module.exports = appRouter;

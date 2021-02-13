@@ -40,6 +40,7 @@ class TimeCapsule extends React.Component {
                                 <label>
                                     {note.from}<br/>
                                     {note.note}<br/>
+                                    {note.date.slice(0, -14)}<br/>
                                 </label>
                             </li>
                             )}

@@ -14,6 +14,9 @@ export default function Header() {
                         <a className={"nav-links"} href={"/timecapsule"}>
                             TIME CAPSULE
                         </a>
+                        <a className={"nav-links"} href={"/news"}>
+                            NEWS
+                        </a>
                     </li>
                 </ul>
             </nav>
