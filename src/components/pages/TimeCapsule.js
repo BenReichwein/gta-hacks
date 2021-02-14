@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { postTimeCapsule, getTimeCapsule } from '../../actions';
+import '../styles/TimeCapsule.css'
 
 class TimeCapsule extends React.Component {
     constructor(props) {
@@ -32,25 +33,27 @@ class TimeCapsule extends React.Component {
         if (this.props.capsule.length > 0) {
             return (
                 <div>
-                    <div>
-                        <h3>Capsule Notes</h3>
-                        <ul>
+                    <h2 style={{color: '#7EA1D5', marginLeft: '370px'}}>GLOBAL TIME CAPSULE</h2>
+                    <div className={'capsuleNotes'}>
+                        <ul style={{color: 'white', textAlign: 'center', fontSize: '20px'}}>
                             { this.props.capsule.map(note =>
                             <li key={note._id}>
                                 <label>
-                                    {note.from}<br/>
                                     {note.note}<br/>
+                                    ~{note.from}<br/>
                                     {note.date.slice(0, -14)}<br/>
-                                </label>
+                                </label><br/>
                             </li>
                             )}
                         </ul>
                     </div>
                     <br/>
-                    <div>
-                        <h3>Create a Time Capsule Note</h3>
+                    <div className={'capsuleForm'}>
+                        <h3 style={{textAlign: 'center'}}>Create a Time Capsule Note</h3>
                         <form onSubmit={this.onSubmit}>
+                        <h3 style={{paddingLeft: '20px'}}>From:</h3>
                         <input
+                            className='from'
                             type="from"
                             name="from"
                             placeholder="Enter From"
@@ -58,7 +61,10 @@ class TimeCapsule extends React.Component {
                             onChange={this.handleInputChange}
                             required
                         />
+                        <br/>
+                        <h3 style={{paddingLeft: '20px'}}>Note:</h3>
                         <input
+                            className='note'
                             type="note"
                             name="note"
                             placeholder="Enter Note"
@@ -66,7 +72,9 @@ class TimeCapsule extends React.Component {
                             onChange={this.handleInputChange}
                             required
                         />
-                        <input type="submit" value="Submit"/>
+                        <br/>
+                        <br/>
+                        <button className={'add'} type="submit">ADD</button>
                         </form>
                     </div>
                 </div>

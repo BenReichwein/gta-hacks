@@ -1,0 +1,60 @@
+.capsuleNotes {
+    position: absolute;
+    width: 848px;
+    height: 714px;
+    left: 70px;
+    top: 133px;
+
+    background: rgba(143, 188, 143, 0.8);
+    border-radius: 26px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0,
+    0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.capsuleForm {
+    position: absolute;
+    width: 401px;
+    height: 709px;
+    left: 986px;
+    top: 138px;
+
+    background: #7EA1D5;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0,
+    0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.from {
+    position: relative;
+    width: 341px;
+    height: 40px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border-radius: 7px;
+}
+
+.note {
+    position: relative;
+    width: 341px;
+    height: 100px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border-radius: 7px;
+}
+
+.add {
+    border-color: #8FBC8F;
+    color: #7EA1D5;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-left: 150px;
+    background-image: -webkit-linear-gradient(45deg, #8FBC8F 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #8FBC8F 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+  }
+  .add:hover {
+    background-position: 0;
+  }
