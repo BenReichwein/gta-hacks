@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react'
 import {webScrape} from '../../actions'
+import '../styles/News.css'
 
 class News extends Component {
     constructor(props) {
@@ -45,13 +46,17 @@ class News extends Component {
         } else {
             return (
                 <div>
-                    <h2>SUGGESTED LINKS</h2>
-                    <button onClick={()=> this.props.webScrape('https://www.bbc.com/news/world-us-canada-56035306')}>VACCINES</button>
-                    <button onClick={()=> this.props.webScrape('https://cmha.ca/news/covid-19-and-mental-health')}>MENTAL HEALTH</button>
-                    <button onClick={()=> this.props.webScrape('https://www.ctvnews.ca/health/coronavirus/cdc-study-finds-two-masks-are-better-than-one-vs-covid-19-1.5303383')}>MASKS</button>
-                    <button onClick={()=> this.props.webScrape('https://www.ontario.ca/page/covid-19-response-framework-keeping-ontario-safe-and-open?gclid=CjwKCAiAjp6BBhAIEiwAkO9WujliUVzwFDWEAUjzNlNo5Ap8M5vSFOkPVR_rNwYCHsOek4OdQ8L5CxoCkyUQAvD_BwE&gclsrc=aw.ds')}>RESTRICTIONS</button>
-                    <h3>Web Scrape a News Link:</h3>
+                    <div className={'suggestedLinks'}>
+                        <h2 style={{color:'#5669AE'}}>SUGGESTED LINKS</h2>
+                        <button className={'suggestedButton'} onClick={()=> this.props.webScrape('https://www.bbc.com/news/world-us-canada-56035306')}>VACCINES</button>
+                        <button className={'suggestedButton'} onClick={()=> this.props.webScrape('https://cmha.ca/news/covid-19-and-mental-health')}>MENTAL HEALTH</button>
+                        <button className={'suggestedButton'} onClick={()=> this.props.webScrape('https://www.ctvnews.ca/health/coronavirus/cdc-study-finds-two-masks-are-better-than-one-vs-covid-19-1.5303383')}>MASKS</button>
+                        <button className={'suggestedButton'} onClick={()=> this.props.webScrape('https://www.ontario.ca/page/covid-19-response-framework-keeping-ontario-safe-and-open?gclid=CjwKCAiAjp6BBhAIEiwAkO9WujliUVzwFDWEAUjzNlNo5Ap8M5vSFOkPVR_rNwYCHsOek4OdQ8L5CxoCkyUQAvD_BwE&gclsrc=aw.ds')}>RESTRICTIONS</button>
+                    </div>
+                    <div className={'inputBox'}>
+                        <h3 style={{textAlign: 'center', color: 'white'}}>Web Scrape a News Link:</h3>
                         <input
+                            className="linkInput"
                             type="link"
                             name="link"
                             placeholder="Enter Link"
@@ -59,7 +64,9 @@ class News extends Component {
                             onChange={this.handleInputChange}
                             required
                         />
-                        <button onClick={this.onSubmit}>Scrape</button>
+                        <br/>
+                        <button className={'button'} onClick={this.onSubmit}>Scrape</button>
+                    </div>
                 </div>
             )
         }

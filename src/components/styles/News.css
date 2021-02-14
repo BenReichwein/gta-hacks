@@ -1,0 +1,58 @@
+.inputBox {
+    position: absolute;
+    width: 689px;
+    height: 178px;
+    left: 366px;
+    top: 214px;
+
+    background: #5669AE;
+    border-radius: 13px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0,
+    0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.linkInput {
+    position: relative;
+    width: 341px;
+    height: 40px;
+    margin-left: 150px;
+    background: #FFFFFF;
+    border-radius: 7px;
+}
+
+.button {
+    border-color: #8FBC8F;
+    color: #7EA1D5;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-left: 260px;
+    background-image: -webkit-linear-gradient(45deg, #8FBC8F 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #8FBC8F 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+.button:hover {
+    background-position: 0;
+}
+
+.suggestedLinks {
+    margin-left: 100px;
+}
+
+.suggestedButton {
+    border-color: #8FBC8F;
+    color: #7EA1D5;
+    border-radius: 10px;
+    font-size: 30px;
+    background-image: -webkit-linear-gradient(45deg, #8FBC8F 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #8FBC8F 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+.suggestedButton:hover {
+    background-position: 0;
+}
