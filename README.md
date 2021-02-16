@@ -1,7 +1,7 @@
+### [Youtube Demo](https://www.youtube.com/watch?v=sKWExg33BL8)
+
 # COVID 19 CENTRAL
 > A React, Redux and Express Hackathon Project
-
-### [Youtube Demo](https://www.youtube.com/watch?v=sKWExg33BL8)
 
 ## Quick Start
 ```
